@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Open MCT Tutorials</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body onload="loadRecords()" style="text-align: center;">
+    <div class="container">
+        <div class="form-check">
+            <input type="checkbox" onchange="onPwrcChange(this)" class="form-check-input" id="pwr.c" checked>
+            <label class="form-check-label" for="pwr.c">pwr.c</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" onchange="onPwrvChange(this)" class="form-check-input" id="pwr.v">
+            <label class="form-check-label" for="pwr.v">pwr.v</label>
+        </div>
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Timestamp <button onclick="incrOrder()" class="btn btn-sm">&uarr;</button>
+                        <button onclick="decOrder()" class="btn btn-sm"> &darr;</button></th>
+                    <th scope="col">Value</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
