@@ -32,7 +32,7 @@ const renderTable = () => {
 }
 
 const incrOrder = () => {
-    displayedrecords.sort((a, b) => a.timestamp > b.timestamp ? 1 : -1);
+    displayedrecords.sort((a, b) => a.timestamp >= b.timestamp ? 1 : -1);
     order = INCR;
     renderTable();
 }
